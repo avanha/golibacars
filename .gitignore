@@ -1,0 +1,6 @@
+# Corpora and golden files made from real traffic stay local.
+/corpus*/
+*.local.jsonl
+
+# libacars, downloaded and built by make libacars
+/third_party/

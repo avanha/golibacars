@@ -1,0 +1,8 @@
+golibacars is a Go port of libacars (https://github.com/szpajder/libacars), MIT licensed,
+Copyright (c) 2018-2023 Tomasz Lemiech. The port follows libacars 2.2.1, commit
+9af09a0121d4ec577339cbd4c7420d7519da48fa (2 November 2025). The decoding rules, message layouts, labels and output formats
+come from that library.
+
+The FANS-1/A type tables in fans/types_gen.go are generated from the output of asn1c 0.9.28 that libacars
+ships (libacars/asn1), and per/ follows asn1c's unaligned PER decoder. asn1c is
+Copyright (c) 2003-2014 Lev Walkin <vlm@lionet.info> and is distributed under a BSD licence.
