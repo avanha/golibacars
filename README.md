@@ -120,6 +120,19 @@ rebuilds the FANS-1/A tables from the libacars sources in `third_party/`.
   silicon. On platforms where `char` is unsigned, libacars gives different values for non-ASCII bytes in MIAM text.
 - Output is compared as bytes of the C `la_vstring`, so strings with embedded NULs are compared in full.
 
+## Versions
+
+golibacars has its own version, and releases are tagged `v0.x.y`. The libacars version it follows is stated in this
+file, in `NOTICE` and in each tag's message ("follows libacars 2.2.1"), not in the tag itself: a `v2.x` tag would
+force a `/v2` module path, and the two projects fix bugs on their own schedules.
+
+Until `v1.0.0`, which will come when the API has settled:
+
+- **Minor** (`v0.2.0`): an incompatible change to the Go API, a new decoder, a move to a newer libacars release,
+  or any change that alters what an existing decoder prints for input it already handled.
+- **Patch** (`v0.1.1`): a fix that makes the port agree with the libacars version it follows, a crash fix,
+  or a change to tests, tooling or documentation only.
+
 ## Licence
 
 MIT, as libacars (https://github.com/szpajder/libacars). See `LICENSE` and `NOTICE`.
